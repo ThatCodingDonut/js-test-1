@@ -1,15 +1,23 @@
-import express from "express";
-import asyncio from "asyncio";
-import fs from "fs";
-import chalk from "chalk";
+import express from 'express';
+import path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-let app = express()
+const app = express();
+const port = 80;
+app.use(express.static(path.join(__dirname)));
 
-app.all('/', (req, res) => {
-    res.end(fs.readFileSync('pages/index.html'))
+// Route to serve index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+});
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'register', 'register.html'))
 })
 
-app.listen(80, (_params) => {
-    var _log = chalk.yellowBright.bold("Running on port 80")
-    console.log(_log)
-})
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

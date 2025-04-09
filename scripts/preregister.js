@@ -1,6 +1,6 @@
 const redirect = (link) => {
     try {
-        return window.location.href(link); 
+        return window.location.assign(link);
     } catch (err) {
         return err; 
     }
@@ -11,10 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (btn) {
         btn.onclick = () => {
-            alert("Hi from the button!");
-            redirect("https://your-redirect-link.com");
+            redirect("/register");
         };
     }
-
-    alert("Hi from DOM loaded!");
 });

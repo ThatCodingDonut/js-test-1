@@ -199,6 +199,32 @@
             }
         }
     </style>
+    <style>
+        .forms {
+            width: 50%;
+            align-self: center;
+            justify-self: center;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+
+            background-color: lightblue;
+            border-radius: 10px;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                border-radius: 15px;
+                padding: 1rem 2rem 1rem 2rem;
+                width: 10rem;
+            }
+        }
+    </style>
     <script src="scripts/preregister.js" type="text/javascript" defer></script>
 </head>
 <body>
@@ -212,11 +238,18 @@
     </div>
     <br>
     <section class="hero">
-        <h1 class="hero-header">S O C I A L I T Y</h1>
+        <h1 class="hero-header">Register Today</h1>
         <br>
-        <p class="hero-paragraph">The internet, without the risk.<br><br> Join sociality; an online community dedicated to creating a bigger, better online community.<br><br>Click the button below to reserve an official spot.</p>
-        <br><br><br>
-        <button class="hero-btn" id="PR">PRE-REGISTER TODAY</button>
+        <p class="hero-paragraph">Register today by filling out the form below!<br><br>We are accepting all members of the community; no matter who, what, or where you are.</p>
+    </section>
+    <section class="forms">
+        <form>
+            <label for="Email">> EMAIL <</label>
+            <input type="text" name="Email" id="email">
+            <br>
+            <label for="Full Name">> NAME <</label>
+            <input type="text" name="Full Name" id="name">
+        </form>
     </section>
     <section class="footer">
         <p class="footer-copy">Sociality</p>
