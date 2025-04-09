@@ -36,6 +36,9 @@
             justify-self: flex-end;
             justify-content: flex-end;
             margin-left: auto;
+            a {
+                transition: all .3s;
+            }
         }
 
         .nav .nav-links a:active {
@@ -43,22 +46,115 @@
         }
 
         .nav .nav-links a:hover {
-            transition: .3s;
+            letter-spacing: 2px;
             color: lightgray;
             text-decoration: underline 2px;
         }
 
-        /* HERO */
-        body {
-            background-image: url('https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg') no-repeat center center;
+        .sep {
+            margin: 0;
         }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            width: 70%;
+            height: 100%;
+            align-self: center;
+            justify-self: center;
+            padding: 1rem 2rem 1rem 2rem;
+        }
+
+        .hero .hero-header {
+            font-size: 35px;
+            margin-bottom: 2rem;
+        }
+
+        .hero .hero-paragraph {
+            font-size: larger;
+            font-weight: 500;
+            letter-spacing: .05em;
+        }
+
+        .hero .hero-btn {
+            background: #fff #333;
+            color: #333;
+            text-align: center;
+            padding: 1rem 2rem 1rem 2rem;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 1px 0 #333;
+            margin-top: 2rem;
+            width: 50%;
+            font-size: larger;
+            font-weight: bold;
+            letter-spacing: .25em;
+            transition: all .5s ease;
+        }
+
+        .hero .hero-btn:hover {
+            background: linear-gradient(rgba(0, 200, 255), rgb(0, 70, 255));
+            color: #fff;
+            transform: scale(1.05);
+            background-size: 200% 200%;
+            animation: main 10s linear;
+            box-shadow: 0 0 5px orange;
+            cursor: pointer;
+            a {
+                color: white;
+            }
+        }
+
+        .hero button.hero-btn:active {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            padding: 0;
+        }
+
+        .footer {
+            display: flex;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #333;
+            width: auto;
+            color: white;
+            padding: 1rem 2rem 1rem 2rem;
+            .footer-copy {
+                justify-content: flex-start;
+                justify-self: flex-start;
+                justify-items: flex-start;
+                margin-right: auto;
+            }
+            .footer-links {
+                justify-self: flex-end;
+                justify-content: flex-end;
+                justify-items: flex-end;
+                margin-left: auto;
+                a {
+                    color: white;
+                }
+            }
+        }
+
 
         /* RESPONSIVE - MOBILE */
 
         @media only screen and (max-width: 600px) {
-            .sep {
-                margin-left: 5px;
-                margin-right: 5px;
+            .hero .hero-btn {
+                font-size: auto;
+                width: auto;
             }
 
             .nav {
@@ -81,12 +177,6 @@
                 padding-top: 1rem;
             }
 
-            .nav .nav-links a {
-                text-decoration: none;
-                color: white;
-                padding: 0;
-            }
-
             .nav .nav-links a:active {
                 color: #fff;
             }
@@ -104,14 +194,22 @@
         <h1 class="nav-brand">My Website</h1>
         <div class="nav-links">
             <a href="#">MENU</a>
-            <span class="sep"> &centerdot; </span>
             <a href="#">SHOP</a>
-            <span class="sep"> &centerdot; </span>
             <a href="#">ALERTS</a>
         </div>
     </div>
+    <br>
     <section class="hero">
-        <img src="/home/ThatCodingDonut/js-test-1/pages/hero.png" alt="hi">
+        <h1 class="hero-header">Hello, World!</h1>
+        <p class="hero-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, obcaecati ut nam magnam praesentium rem, at, nesciunt officia suscipit mollitia voluptas temporibus nulla quae rerum iste laborum porro tenetur architecto.</p>
+        <button class="hero-btn"><a href="#">JOIN US TODAY</a></button>
+    </section>
+    <section class="footer">
+        <p class="footer-copy">My Website</p>
+        <span class="footer-links">
+            <a href="#">Link1</a>
+            <a href="#">Link2</a>
+        </span>
     </section>
 </body>
 </html>
