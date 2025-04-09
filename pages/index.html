@@ -10,26 +10,32 @@
             margin: 0;
         }
         .nav {
-            display: flexbox;
+            display: flex;
             flex-direction: row;
             color: white;
             background-color: #333;
-            padding: 1em 2em 1em 2em;
+            padding: 1rem 2rem 1rem 2rem;
+            align-items: center;
+            width: auto;
         }
 
         .nav .nav-brand {
             justify-self: flex-start;
+            justify-content: flex-start;
+            justify-items: flex-start;
         }
 
         .nav .nav-links a {
             text-decoration: none;
             color: white;
-            padding-right: 1em;
+            padding-left: .5em;
         }
 
         .nav .nav-links {
             justify-items: flex-end;
             justify-self: flex-end;
+            justify-content: flex-end;
+            margin-left: auto;
         }
 
         .nav .nav-links a:active {
@@ -42,12 +48,24 @@
             text-decoration: underline 2px;
         }
 
+        /* HERO */
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg') no-repeat center center;
+        }
+
+        /* RESPONSIVE - MOBILE */
+
         @media only screen and (max-width: 600px) {
+            .sep {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
             .nav {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
-                padding: 1em .5em 1em .5em
+                padding: 1em .5em 1em .5em;
             }
 
             .nav .nav-brand {
@@ -55,10 +73,18 @@
                 justify-self: center;
             }
 
+            .nav .nav-links {
+                align-content: center;
+                justify-content: center;
+                margin-right: 0;
+                margin-left: 0;
+                padding-top: 1rem;
+            }
+
             .nav .nav-links a {
                 text-decoration: none;
                 color: white;
-                padding-right: .5em;
+                padding: 0;
             }
 
             .nav .nav-links a:active {
@@ -76,12 +102,16 @@
 <body>
     <div class="nav">
         <h1 class="nav-brand">My Website</h1>
-        <br>
         <div class="nav-links">
             <a href="#">MENU</a>
+            <span class="sep"> &centerdot; </span>
             <a href="#">SHOP</a>
+            <span class="sep"> &centerdot; </span>
             <a href="#">ALERTS</a>
         </div>
     </div>
+    <section class="hero">
+        <h1>hi</h1>
+    </section>
 </body>
 </html>
