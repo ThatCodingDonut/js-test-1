@@ -11,18 +11,27 @@
         }
 
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
             background-color: #333;
             color: whitesmoke;
         }
 
         .nav {
             display: flex;
+            top: 0;
+            position: absolute;
+            right: 0;
+            left: 0;
             flex-direction: row;
             color: white;
             background-color: black;
             padding: 1rem 2rem 1rem 2rem;
             align-items: center;
-            width: auto;
+            width: 100% auto;
         }
 
         .nav .nav-brand {
@@ -61,17 +70,14 @@
             margin: 0;
         }
 
+
         /* HERO */
         .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            justify-content: center;
-            align-content: center;
             width: 70%;
-            align-self: center;
-            justify-self: center;
             padding: 1rem 2rem 1rem 2rem;
             .hero-header {
                 color: white;
@@ -79,10 +85,6 @@
                 font-size: 50px;
                 letter-spacing: 5px;
             }
-        }
-
-        .hero .hero-header {
-            margin-bottom: 2rem;
         }
 
         .hero .hero-paragraph {
@@ -99,7 +101,6 @@
             border: 0;
             border-radius: 10px;
             box-shadow: 0 0 1px 0 #333;
-            margin-top: 2rem;
             width: 50%;
             font-size: larger;
             font-weight: bold;
@@ -210,9 +211,11 @@
     </div>
     <br>
     <section class="hero">
-        <h1 class="hero-header">Hello, World!</h1>
-        <p class="hero-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, obcaecati ut nam magnam praesentium rem, at, nesciunt officia suscipit mollitia voluptas temporibus nulla quae rerum iste laborum porro tenetur architecto.</p>
-        <button class="hero-btn"><a href="#">JOIN US TODAY</a></button>
+        <h1 class="hero-header">S O C I A L I T Y</h1>
+        <br>
+        <p class="hero-paragraph">The internet, without the risk.<br><br> Join sociality; an online community dedicated to creating a bigger, better online community.<br><br>Click the button below to reserve an official spot.</p>
+        <br><br><br>
+        <button class="hero-btn" id="PR">PRE-REGISTER TODAY</button>
     </section>
     <section class="footer">
         <p class="footer-copy">My Website</p>
@@ -221,5 +224,6 @@
             <a href="#">Link2</a>
         </span>
     </section>
+    <script src="scripts/preregister.js" type="text/javascript"></script>
 </body>
 </html>
