@@ -1,3 +1,15 @@
-// run `node index.js` in the terminal
+import express from "express";
+import asyncio from "asyncio";
+import fs from "fs";
+import chalk from "chalk";
 
-console.log(`Hello Node.js`, process);
+let app = express()
+
+app.all('/', (req, res) => {
+    res.end(fs.readFileSync('pages/index.html'))
+})
+
+app.listen(80, (_params) => {
+    var _log = chalk.yellowBright.bold("Running on port 80")
+    console.log(_log)
+})
