@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sociality - Register</title>
+  <style>
+    /* Global Styles */
+    * {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #333;
+      color: whitesmoke;
+      padding: 1rem;
+    }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      flex-direction: row;
+      background-color: black;
+      padding: 1rem 2rem;
+      align-items: center;
+    }
+
+    .nav .nav-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav .nav-links {
+      margin-left: auto;
+    }
+
+    .nav .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding-left: 0.5em;
+      transition: all 0.3s;
+    }
+
+    .nav .nav-links a:hover {
+      letter-spacing: 2px;
+      color: lightgray;
+      text-decoration: underline 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 70%;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .hero .hero-header {
+      color: white;
+      text-shadow: 0 0 4px whitesmoke;
+      font-size: 50px;
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .hero .hero-paragraph {
+      font-size: larger;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    /* Apple-Like Form Section */
+    .forms {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      max-width: 400px;
+      padding: 2rem;
+      margin-top: 2rem;
+      background: linear-gradient(145deg, #ffffff, #f5f5f7);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    .forms form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .forms label {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .forms input[type="text"],
+    .forms input[type="email"],
+    .forms input[type="password"] {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .forms input[type="text"]:focus,
+    .forms input[type="email"]:focus,
+    .forms input[type="password"]:focus {
+      border-color: #0070c9;
+    }
+
+    .forms button {
+      background-color: #0070c9;
+      color: #fff;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .forms button:hover {
+      background-color: #005fa3;
+      transform: scale(1.02);
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: black;
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    .footer .footer-copy {
+      margin-right: auto;
+    }
+
+    .footer .footer-links a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    /* Responsive Adjustments */
+    @media only screen and (max-width: 600px) {
+      .hero {
+        width: 90%;
+        padding: 2rem 1rem;
+      }
+      .forms {
+        width: 90%;
+        padding: 1.5rem;
+      }
+      .nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em 0.5em;
+      }
+      .nav .nav-links {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+  <script src="scripts/preregister.js" type="text/javascript" defer></script>
+</head>
+<body>
+  <div class="nav">
+    <h1 class="nav-brand">SOCIALITY</h1>
+    <div class="nav-links">
+      <a href="#">MENU</a>
+      <a href="#">SHOP</a>
+      <a href="#">ALERTS</a>
+    </div>
+  </div>
+  <section class="hero">
+    <h1 class="hero-header">Register Today</h1>
+    <p class="hero-paragraph">
+      Register today by filling out the form below!<br />
+      We welcome everyone in our community.
+    </p>
+  </section>
+  <section class="forms">
+    <form method="post">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="your.email@example.com"
+      />
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Your Full Name"
+      />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+  <section class="footer">
+    <p class="footer-copy">Sociality</p>
+    <span class="footer-links">
+      <a href="#">Link1</a>
+      <a href="#">Link2</a>
+    </span>
+  </section>
+</body>
+</html>
